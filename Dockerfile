@@ -9,6 +9,11 @@ RUN npm install
 
 COPY . .
 
-# ENV TOKEN="MTExMjgwMTI3ODEwODY0MzQyOQ.GnRMw4.GtXu_IB9Y9o2wGopbPeDCWC701g_ekEZ0fxavg"
+RUN mkdir setting && \
+    echo '{ "wel": "925047985736405022" }' > setting/textChannel.json && \
+    echo '{
+    "General": "712555939797925899",
+    "sirasirasirasira": "1113560013907165224"
+  }' > setting/voiceChannel.json
 
 CMD [ "node", "index.js" ]
