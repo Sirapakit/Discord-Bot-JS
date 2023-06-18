@@ -10,8 +10,8 @@ const client = new Client({
             IntentsBitField.Flags.MessageContent,
             IntentsBitField.Flags.GuildVoiceStates] });
 
-const voiceChannelData = JSON.parse(fs.readFileSync("voiceChannel.json"))
-const textChannelData = JSON.parse(fs.readFileSync("textChannel.json"))
+const voiceChannelData = JSON.parse(fs.readFileSync("./setting/voiceChannel.json"))
+const textChannelData = JSON.parse(fs.readFileSync("./setting/textChannel.json"))
 
 // Initialise 
 client.on('ready', (c) => {
